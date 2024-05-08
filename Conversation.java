@@ -7,12 +7,14 @@ public class Conversation {
      * Mirrors responses or produces response from array of canned ones for desired number of rounds
      */
   public static void main(String[] args) {
+    /*Initializes arraylist of static responses and adds possible responses to it */
     ArrayList<String> cannedResponses = new ArrayList<>();
     cannedResponses.add("That's wild!");
     cannedResponses.add("I'm totally listening.");
     cannedResponses.add("Wow, tell me more.");
     cannedResponses.add("This is such a fun conversation.");
     cannedResponses.add("Oh, okay.");
+    /* Initializes scanner to get user input */
     Scanner sc = new Scanner(System.in);
     System.out.println("How many rounds of conversation?");
     int Rounds= sc.nextInt(); //this saves the user's input as Rounds
@@ -24,7 +26,7 @@ public class Conversation {
     transcript.add(times);
     transcript.add("Hello! What are you thinking about today?");
     System.out.println("Hello! What are you thinking about today?");
-    //The intro is printed once before the loop starts
+    /*For loop allows conversation to continue for the desired length */
     for (int i=1; i<= Rounds; i++){ //this allows the chat to continue the desired number of rounds
       Random rand= new Random(); //generates a random number to use later for a canned response
         int num = rand.nextInt(1,4);
